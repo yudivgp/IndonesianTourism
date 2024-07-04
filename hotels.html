@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Hotels in Indonesia</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .hotel-card {
+            border: 1px solid #ccc;
+            padding: 16px;
+            margin: 16px 0;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hotel-card img {
+            width: 200px; /* Menyusutkan lebar gambar */
+            height: auto;
+            border-radius: 8px;
+            margin-right: 16px; /* Menambah jarak antara gambar dan teks */
+        }
+
+        .hotel-details {
+            flex-grow: 1;
+        }
+
+        .hotel-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 16px;
+        }
+
+        .hotel-buttons a {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .hotel-buttons a.view-btn {
+            background-color: #008CBA;
+        }
+
+        .hotel-buttons a:hover {
+            background-color: #45a049;
+        }
+
+        .hotel-buttons a.view-btn:hover {
+            background-color: #005f73;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Indonesian Tourism</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="spots.html">Tourist Spots</a></li>
+                <li><a href="hotels.html">Hotels</a></li>
+                <li><a href="about.html">AboutMe</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Favorite Hotels in Indonesia</h2>
+            <div class="hotel-card">
+                <img src="img/hotel/mulia.jpg" alt="Hotel Mulia, Jakarta">
+                <div class="hotel-details">
+                    <h3>Hotel Mulia, Jakarta & Bali</h3>
+                    <p>Fasilitas: Kolam renang, Spa, WiFi Gratis, Restoran.</p>
+                    <p>Harga: Rp 2,000,000 per malam</p>
+                    <p>Alamat: Jl. Asia Afrika, Senayan, Jakarta</p>
+                    <div class="hotel-buttons">
+                        <a href="transactions.html" class="book-btn">Booking</a>
+                        <a href="https://www.themulia.com/en/senayan-jakarta" class="view-btn" target="_blank">Visit to Site</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hotel-card">
+                <img src="img/hotel/oberoi.jpg" alt="The Oberoi, Bali">
+                <div class="hotel-details">
+                    <h3>The Oberoi, Bali</h3>
+                    <p>Fasilitas: Pantai pribadi, Kolam renang, Spa, WiFi Gratis, Restoran.</p>
+                    <p>Harga: Rp 3,500,000 per malam</p>
+                    <p>Alamat: Jl. Kayu Aya, Seminyak, Bali</p>
+                    <div class="hotel-buttons">
+                        <a href="transactions.html" class="book-btn">Booking</a>
+                        <a href="https://www.oberoihotels.com/hotels-in-bali/" class="view-btn" target="_blank">Visit to Site</a> 
+                    </div>
+                </div>
+            </div>
+            <div class="hotel-card">
+                <img src="img/hotel/theritzcarltonBali.jpg" alt="Ritz-Carlton, Mega Kuningan, Jakarta">
+                <div class="hotel-details">
+                    <h3>Ritz-Carlton, Nusa Dua, Bali</h3>
+                    <p>Fasilitas: Kolam renang, Gym, Spa, WiFi Gratis, Restoran.</p>
+                    <p>Harga: Rp 3,500,000 per malam</p>
+                    <p>Alamat: Jalan Raya Nusa Dua Selatan Lot III Sawangan, Nusa Dua, Bali</p>
+                    <div class="hotel-buttons">
+                        <a href="transactions.html" class="book-btn">Booking</a>
+                        <a href="https://id.ritzcarltonbali.com/" class="view-btn" target="_blank">Visit to Site</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hotel-card">
+                <img src="img/hotel/toba.jpg" alt="Labersa Hotel, Toba, Sumut">
+                <div class="hotel-details">
+                    <h3>Labersa Hotel & Convention Centre Toba, Sumatera Utara</h3>
+                    <p>Fasilitas: Kolam renang, Gym, Spa, WiFi Gratis, Restoran.</p>
+                    <p>Harga: Rp 2,500,000 per malam</p>
+                    <p>Alamat: Saribu Raja Janji Maria, Kec. Balige, Toba, Sumatera Utara</p>
+                    <div class="hotel-buttons">
+                        <a href="transactions.html" class="book-btn">Booking</a>
+                        <a href="https://labersatoba.com/" class="view-btn" target="_blank">Visit to Site</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hotel-card">
+                <img src="img/hotel/saraswatiboro.jpg" alt="Hotel Sarasvati Borobudur">
+                <div class="hotel-details">
+                    <h3>Hotel Sarasvati Borobudur, Magelang, Jateng</h3>
+                    <p>Fasilitas: Kolam renang, Gym, Spa, WiFi Gratis, Restoran.</p>
+                    <p>Harga: Rp 2,500,000 per malam</p>
+                    <p>Alamat: Jalan Balaputeradewa No. 10, Borobudur, Borobudur, Magelang, Jawa Tengah</p>
+                    <div class="hotel-buttons">
+                        <a href="transactions.html" class="book-btn">Booking</a>
+                        <a href="https://sarasvatiborobudur.com/" class="view-btn" target="_blank">Visit to Site</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hotel-card">
+                <img src="img/hotel/thewestin.jpg" alt="The Westin Surabaya">
+                <div class="hotel-details">
+                    <h3>The Westin Surabaya, Jawa Timur</h3>
+                    <p>Fasilitas: Kolam renang, Gym, Spa, WiFi Gratis, Restoran.</p>
+                    <p>Harga: Rp 2,500,000 per malam</p>
+                    <p>Alamat: Pakuwon Mall, Jl. Raya Lontar No.2, Puncak Indah, Kec. Wiyung, Surabaya, Jawa Timur</p>
+                    <div class="hotel-buttons">
+                        <a href="transactions.html" class="book-btn">Booking</a>
+                        <a href="https://www.westinsurabaya.co.id/" class="view-btn" target="_blank">Visit to Site</a>                       
+                    </div>
+                </div>
+            </div>
+            <div class="hotel-card">
+                <img src="img/hotel/rajaampat.jpg" alt="Meridian Adventure Dive Resort, Raja Ampat">
+                <div class="hotel-details">
+                    <h3>Meridian Adventure Dive Resort, Raja Ampat</h3>
+                    <p>Fasilitas: Kolam renang, Gym, Spa, WiFi Gratis, Restoran.</p>
+                    <p>Harga: Rp 2,500,000 per malam</p>
+                    <p>Alamat: Waisai, Distrik Kota Waisai, Kabupaten Raja Ampat, Papua Barat</p>
+                    <div class="hotel-buttons">
+                        <a href="transactions.html" class="book-btn">Booking</a>
+                        <a href="https://raja.meridianadventuredive.com/" class="view-btn" target="_blank">Visit to Site</a>    
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Indonesian Tourism | Created by Eko Yudi Darmawan_211011450173 &copy; 2024</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

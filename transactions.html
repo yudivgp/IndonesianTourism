@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="transaction-page">
+    <header>
+        <h1>Indonesian Tourism</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="spots.html">Tourist Spots</a></li>
+                <li><a href="hotels.html">Hotels</a></li>
+                <li><a href="about.html">AboutMe</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Transaction Form</h2>
+            <form id="transaction-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="hotel">Select Hotel:</label>
+                    <select id="hotel" name="hotel" required>
+                        <option value="Hotel Mulia, Jakarta & Bali">Hotel Mulia, Jakarta & Bali</option>
+                        <option value="The Oberoi, Bali">The Oberoi, Bali</option>
+                        <option value="Ritz-Carlton, Nusa Dua, Bali">Ritz-Carlton, Nusa Dua, Bali</option>
+                        <option value="Labersa Hotel & Convention Centre Toba, Sumatera Utara">Labersa Hotel & Convention Centre Toba, Sumatera Utara</option>
+                        <option value="The Westin Surabaya, Jawa Timur">The Westin Surabaya, Jawa Timur</option>
+                        <option value="Meridian Adventure Dive Resort, Raja Ampat">Meridian Adventure Dive Resort, Raja Ampat</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Room Type:</label>
+                    <div>
+                        <input type="radio" id="standard" name="room_type" value="Standard" required>
+                        <label for="standard">Standard</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="deluxe" name="room_type" value="Deluxe" required>
+                        <label for="deluxe">Deluxe</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="suite" name="room_type" value="Suite" required>
+                        <label for="suite">Suite</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="rooms">Total of Rooms:</label>
+                    <input type="number" id="rooms" name="rooms" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="checkin">Check-in Date:</label>
+                    <input type="date" id="checkin" name="checkin" required>
+                </div>
+                <div class="form-group">
+                    <label for="checkout">Check-out Date:</label>
+                    <input type="date" id="checkout" name="checkout" required>
+                </div>
+                <div class="button-group">
+                    <button type="button" onclick="processTransaction()">SUBMIT</button>
+                    <button type="button" onclick="cancelTransaction()">CANCEL</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Indonesian Tourism | Created by Eko Yudi Darmawan_211011450173 &copy; 2024</p>
+    </footer>
+    <script>
+        function processTransaction() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var hotel = document.getElementById("hotel").value;
+            var roomType = document.querySelector('input[name="room_type"]:checked').value;
+            var rooms = document.getElementById("rooms").value;
+            var checkin = document.getElementById("checkin").value;
+            var checkout = document.getElementById("checkout").value;
+
+            // Validasi jika ada field yang kosong
+            if (!name || !email || !phone || !hotel || !roomType || !rooms || !checkin || !checkout) {
+                alert("Mohon melengkapi Form Pemesanan Anda !\n\n<i>Please complete your Booking Form !</i>");
+                return;
+            }
+
+            var today = new Date();
+            var checkinDate = new Date(checkin);
+            today.setHours(0, 0, 0, 0); // Mengatur waktu menjadi 00:00:00 untuk perbandingan yang akurat
+
+            // Validasi jika check-in date kurang dari hari ini
+            if (checkinDate < today) {
+                alert("Mohon maaf, tanggal pemesanan tidak valid !\n\n<i>Sorry, the booking date is not valid !</i>");
+                return;
+            }
+
+            // Jika semua validasi lolos, maka proses pemesanan
+            var messageID = "Terima kasih sudah melakukan pemesanan hotel " + hotel + ", tipe kamar " + roomType + ", sejumlah " + rooms + " kamar, transaksi anda akan segera kami proses.";
+            var messageEN = "<i>Thank you for booking at " + hotel + ", room type " + roomType + ", for " + rooms + " rooms, your transaction will be processed shortly.</i>";
+
+            alert(messageID + "\n\n" + messageEN);
+            document.getElementById("transaction-form").reset();
+        }
+
+        function cancelTransaction() {
+            window.location.href = "hotels.html";
+        }
+    </script>
+</body>
+</html>

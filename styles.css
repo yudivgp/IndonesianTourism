@@ -1,0 +1,311 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: url('img/panorama5.jpg'); /* Path ke gambar header Anda */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 2%;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Efek transisi untuk transformasi dan latar belakang */
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Warna latar belakang saat dihover */
+    border-radius: 0%;
+    transform: scale(1.2); /* Perbesar teks saat dihover */
+}
+
+
+main {
+    padding: 20px;
+    padding-top: 150px; /* Tambahkan padding untuk mengimbangi tinggi header */
+    padding-bottom: 100px; /* Tambahkan padding di bawah */
+}
+
+footer {
+    background-color: #11ccad;
+    color: white;
+    text-align: center;
+    padding: 0.1px 0;
+    position: fixed; /* Ubah ke posisi relatif */
+    bottom: 0;
+    width: 100%;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+form button {
+    background-color: #393a39;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+/*=====Style CONTACT=====*/
+
+.head-contact{
+    display: flex;
+}
+
+.des-contact{
+    width: 55%;
+    margin: auto;
+}
+
+.des-contact p{
+    text-align: center;
+    font-size: 2rem;
+    font-family:'Courier New', Courier, monospace;
+    color: #0a65bb;
+    margin-bottom: 10px;
+}
+
+.des-contact h1{
+    font-family: sans-serif;
+    color: rgb(15, 211, 201);
+    font-size: 4rem;
+    text-align: center;
+    text-shadow: #6e6d6d;
+}
+
+.content-contact{
+width: 100%;
+}
+
+.content-contact h2{
+    font-family:sans-serif;
+    font-size: 2rem;
+    color: rgb(255, 123, 0);
+    margin-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.content-contact ul{
+    padding-left: 30px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.content-contact ul li{
+    font-size: 1rem; 
+    padding-bottom: 5px; 
+    list-style: none;  
+}
+
+.content-contact ul li a{
+text-decoration: none;
+list-style: none;  
+}
+
+.content-contact p{
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: medium;
+}
+
+.gambar-contact img{
+    width: 100%;
+    height: 50vh;
+}
+
+/* bg-card-DESKRIPSI============*/
+.bg-card-desk{
+    padding-top: 2vh;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin:auto;
+    flex-wrap: wrap;
+}
+
+.card-desk{
+    width: 400px;
+    height: 300px;
+    margin-bottom: 5px;
+}
+
+.card-desk :hover{
+    box-shadow: 0px 0px 10px #333;
+    transition: 400ms;
+}
+
+.card-desk :hover img{
+    transform: scale(1.5);
+    transition: 2s;
+}
+
+.gambar-card-desk{
+    width: 400px;
+    height: 250px;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.gambar-card-desk img{
+    width: 100%;
+    height: 100%;
+}
+
+.bg-card-desk a{
+    text-decoration: none;
+    color: rgba(31, 18, 211, 0.897);
+    text-align: center;
+}
+
+.dok-deskripsi{
+    color: rgb(3, 83, 83);
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+
+/* ==CARD WISALAM============*/
+.bg-card-wisalam{
+    padding-top: 2vh;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+    flex-wrap: wrap;
+    background-color: black;
+}
+
+.card-wisalam{
+    width: 300px;
+    height: 250px;
+    margin: auto;
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+
+.card-wisalam :hover{
+    box-shadow: 0px 0px 10px #333;
+    transition: 300ms;
+}
+
+.card-wisalam :hover img{
+    transform: scale(1.5);
+    transition: 2s;
+}
+
+.gambar-card-wisalam{
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.gambar-card-wisalam img{
+    width: 100%;
+    height: 100%;
+}
+
+.des-card-wisalam{
+    padding: 2px;
+    background-color: aquamarine;
+}
+
+.bg-card-wisalam a{
+    text-decoration: none;
+    color: rgba(31, 18, 211, 0.897);
+    text-align: center;
+}
+
+.des-card-wisalam h2{
+    margin-bottom: 5px;
+    font-size: medium;
+}
+
+/*==form transactions==*/
+.transaction-page .form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.transaction-page .form-group label {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.transaction-page .form-group input,
+.transaction-page .form-group select {
+    flex: 2;
+}
+
+.transaction-page .button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.transaction-page .button-group button {
+    flex: 1;
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+}
+
+.transaction-page .button-group button:hover {
+    background-color: #49d610;
+}
